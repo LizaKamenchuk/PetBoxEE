@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.example.petboxee.HelloServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello-servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.example.petboxee.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>enter</servlet-name>
+        <servlet-class>com.example.petboxee.EnterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>enter</servlet-name>
+        <url-pattern>/enter</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>animal</servlet-name>
+        <servlet-class>com.example.petboxee.AnimalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>animal</servlet-name>
+        <url-pattern>/animal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelpAdServlet</servlet-name>
+        <servlet-class>com.example.petboxee.HelpAdServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelpAdServlet</servlet-name>
+        <url-pattern>/HelpAdServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdateAnimalServlet</servlet-name>
+        <servlet-class>com.example.petboxee.UpdateAnimalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateAnimalServlet</servlet-name>
+        <url-pattern>/UpdateAnimalServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteAnimalServlet</servlet-name>
+        <servlet-class>com.example.petboxee.DeleteAnimalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteAnimalServlet</servlet-name>
+        <url-pattern>/DeleteAnimalServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteHelpAdServlet</servlet-name>
+        <servlet-class>com.example.petboxee.DeleteHelpAdServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteHelpAdServlet</servlet-name>
+        <url-pattern>/DeleteHelpAdServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetAllUsersServlet</servlet-name>
+        <servlet-class>com.example.petboxee.GetAllUsersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetAllUsersServlet</servlet-name>
+        <url-pattern>/GetAllUsersServlet</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
