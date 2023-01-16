@@ -1,4 +1,8 @@
-package com.example.petboxee;
+package com.example.petboxee.servise;
+
+import com.example.petboxee.dao.SQLData;
+import com.example.petboxee.dao.SQLRequest;
+import com.example.petboxee.models.UserBeam;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +11,7 @@ import java.sql.ResultSet;
 
 public class EnterImp {
     private Connection connection = null;
-    public UserBeam autorizeUser(String email,String password) {
+    public UserBeam autorizeUser(String email, String password) {
         PreparedStatement ps;
         ResultSet rs;
         UserBeam userBeam=null;

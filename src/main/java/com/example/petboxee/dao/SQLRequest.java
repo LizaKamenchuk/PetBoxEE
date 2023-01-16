@@ -1,5 +1,9 @@
-package com.example.petboxee;
+package com.example.petboxee.dao;
 
+
+import com.example.petboxee.models.Animal;
+import com.example.petboxee.models.HelpAd;
+import com.example.petboxee.models.UserBeam;
 
 public class SQLRequest {
     public static String insertUser(UserBeam user, String TableName){
@@ -64,7 +68,7 @@ public class SQLRequest {
     }
 
     public static String selectHelpAds(){return "SELECT * FROM allaboutHelpAd";}
-    public  static  String insertHelpAd(HelpAd helpAd,String TableName){
+    public  static  String insertHelpAd(HelpAd helpAd, String TableName){
         return "INSERT INTO " +
                 TableName +
                 "(type, description, shelter_id) VALUES " +

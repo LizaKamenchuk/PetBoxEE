@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>helloServlet</servlet-name>
-        <servlet-class>com.example.petboxee.HelloServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.HelloServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>register</servlet-name>
-        <servlet-class>com.example.petboxee.RegisterServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.RegisterServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -27,7 +27,7 @@
 
     <servlet>
         <servlet-name>enter</servlet-name>
-        <servlet-class>com.example.petboxee.EnterServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.EnterServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -38,7 +38,7 @@
 
     <servlet>
         <servlet-name>animal</servlet-name>
-        <servlet-class>com.example.petboxee.AnimalServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.AnimalServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -48,7 +48,7 @@
 
     <servlet>
         <servlet-name>HelpAdServlet</servlet-name>
-        <servlet-class>com.example.petboxee.HelpAdServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.HelpAdServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -59,7 +59,7 @@
 
     <servlet>
         <servlet-name>UpdateAnimalServlet</servlet-name>
-        <servlet-class>com.example.petboxee.UpdateAnimalServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.UpdateAnimalServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -70,7 +70,7 @@
 
     <servlet>
         <servlet-name>DeleteAnimalServlet</servlet-name>
-        <servlet-class>com.example.petboxee.DeleteAnimalServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.DeleteAnimalServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -81,7 +81,7 @@
 
     <servlet>
         <servlet-name>DeleteHelpAdServlet</servlet-name>
-        <servlet-class>com.example.petboxee.DeleteHelpAdServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.DeleteHelpAdServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -92,7 +92,7 @@
 
     <servlet>
         <servlet-name>GetAllUsersServlet</servlet-name>
-        <servlet-class>com.example.petboxee.GetAllUsersServlet</servlet-class>
+        <servlet-class>com.example.petboxee.server.GetAllUsersServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

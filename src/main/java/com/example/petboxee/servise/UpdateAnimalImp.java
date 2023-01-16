@@ -1,13 +1,18 @@
-package com.example.petboxee;
+package com.example.petboxee.servise;
+
+import com.example.petboxee.dao.SQLData;
+import com.example.petboxee.dao.SQLRequest;
+import com.example.petboxee.models.Animal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class RegisterImp {
+public class UpdateAnimalImp {
     private Connection connection = null;
-    public int registerUser(UserBeam newUser) {
+
+    public int updateAnimal(Animal animal){
         int i=0;
 
         try {
@@ -19,22 +24,17 @@ public class RegisterImp {
                 System.out.println("Успешное подключение к базе данных!");
             } else System.out.println("Вы пытаетесь подключиться к базе данных, но вы уже подключены!");
 
-            System.out.println("В registerimp: " + newUser.toString());
+            System.out.println("В UpdateAnimalImp: " + animal.toString());
 
             PreparedStatement ps;
             ResultSet rs;
             String sql;
 
-            String[] params = {"*"};
-            sql = SQLRequest.selectUser(newUser.getEmail(), "users", params);
+            sql = SQLRequest.updateAnimal(animal);
             System.out.println(sql);
             ps = connection.prepareStatement(sql);
-            rs = ps.executeQuery(sql);
-            if(rs.next()) return Errors.EXISTENT_USER.getCode();
-
-            sql = SQLRequest.insertUser(newUser, "users");
-            ps = connection.prepareStatement(sql);
             i = ps.executeUpdate(sql);
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -51,6 +51,4 @@ public class RegisterImp {
 
         return i;
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.example.petboxee;
+package com.example.petboxee.server;
 
 import java.io.*;
 

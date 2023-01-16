@@ -1,5 +1,8 @@
-package com.example.petboxee;
+package com.example.petboxee.server;
 
+import com.example.petboxee.servise.AnimalImp;
+import com.example.petboxee.errors.Errors;
+import com.example.petboxee.models.Animal;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

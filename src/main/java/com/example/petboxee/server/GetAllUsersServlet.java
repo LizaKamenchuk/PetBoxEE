@@ -1,5 +1,7 @@
-package com.example.petboxee;
+package com.example.petboxee.server;
 
+import com.example.petboxee.servise.GetAllUsersImp;
+import com.example.petboxee.models.UserBeam;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

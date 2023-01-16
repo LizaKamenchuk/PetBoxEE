@@ -1,16 +1,17 @@
-package com.example.petboxee;
+package com.example.petboxee.servise;
+
+import com.example.petboxee.dao.SQLData;
+import com.example.petboxee.dao.SQLRequest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class UpdateAnimalImp {
+public class DeleteAnimalImp {
     private Connection connection = null;
-
-    public int updateAnimal(Animal animal){
-        int i=0;
-
+    public int deleteAnimal(int id) {
+        int i = 0;
         try {
             Class.forName(SQLData.DRIVER);
             System.out.println("Диск успешно загружен!");
@@ -20,14 +21,13 @@ public class UpdateAnimalImp {
                 System.out.println("Успешное подключение к базе данных!");
             } else System.out.println("Вы пытаетесь подключиться к базе данных, но вы уже подключены!");
 
-            System.out.println("В UpdateAnimalImp: " + animal.toString());
+            System.out.println("В deleteAnimalImp");
 
             PreparedStatement ps;
             ResultSet rs;
             String sql;
 
-            sql = SQLRequest.updateAnimal(animal);
-            System.out.println(sql);
+            sql = SQLRequest.deleteAnimal(id);
             ps = connection.prepareStatement(sql);
             i = ps.executeUpdate(sql);
 

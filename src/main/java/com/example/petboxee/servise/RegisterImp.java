@@ -1,14 +1,20 @@
-package com.example.petboxee;
+package com.example.petboxee.servise;
+
+import com.example.petboxee.errors.Errors;
+import com.example.petboxee.dao.SQLData;
+import com.example.petboxee.dao.SQLRequest;
+import com.example.petboxee.models.UserBeam;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class DeleteAnimalImp {
+public class RegisterImp {
     private Connection connection = null;
-    public int deleteAnimal(int id) {
-        int i = 0;
+    public int registerUser(UserBeam newUser) {
+        int i=0;
+
         try {
             Class.forName(SQLData.DRIVER);
             System.out.println("Диск успешно загружен!");
@@ -18,16 +24,22 @@ public class DeleteAnimalImp {
                 System.out.println("Успешное подключение к базе данных!");
             } else System.out.println("Вы пытаетесь подключиться к базе данных, но вы уже подключены!");
 
-            System.out.println("В deleteAnimalImp");
+            System.out.println("В registerimp: " + newUser.toString());
 
             PreparedStatement ps;
             ResultSet rs;
             String sql;
 
-            sql = SQLRequest.deleteAnimal(id);
+            String[] params = {"*"};
+            sql = SQLRequest.selectUser(newUser.getEmail(), "users", params);
+            System.out.println(sql);
+            ps = connection.prepareStatement(sql);
+            rs = ps.executeQuery(sql);
+            if(rs.next()) return Errors.EXISTENT_USER.getCode();
+
+            sql = SQLRequest.insertUser(newUser, "users");
             ps = connection.prepareStatement(sql);
             i = ps.executeUpdate(sql);
-
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -44,4 +56,6 @@ public class DeleteAnimalImp {
 
         return i;
     }
+
+
 }

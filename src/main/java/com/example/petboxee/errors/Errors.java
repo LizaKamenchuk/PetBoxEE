@@ -1,4 +1,4 @@
-package com.example.petboxee;
+package com.example.petboxee.errors;
 
 public enum Errors {
     NON_EXISTENT_USER(1, "Такого пользователя не существует!"),

@@ -1,5 +1,8 @@
-package com.example.petboxee;
+package com.example.petboxee.server;
 
+import com.example.petboxee.errors.Errors;
+import com.example.petboxee.servise.RegisterImp;
+import com.example.petboxee.models.UserBeam;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -42,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
         RegisterImp registerImp = new RegisterImp();
 
         int i = registerImp.registerUser(newUser);
-        if(i==Errors.EXISTENT_USER.getCode()){
+        if(i== Errors.EXISTENT_USER.getCode()){
             JSONObject jsonObject = new JSONObject();
             try {
                 jsonObject.put("message",Errors.EXISTENT_USER.getCode());

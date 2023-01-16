@@ -1,4 +1,8 @@
-package com.example.petboxee;
+package com.example.petboxee.servise;
+
+import com.example.petboxee.dao.SQLData;
+import com.example.petboxee.dao.SQLRequest;
+import com.example.petboxee.models.Animal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
